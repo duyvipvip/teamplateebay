@@ -1,0 +1,122 @@
+<div class="main">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Tên sản phẩm:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.title" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Logo:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.logo" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Video Link:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.videolink" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Mô tả:</label>
+                </div>
+                <div class="col-md-8">
+                    <textarea [(ngModel)]="model.description" name="" id="" cols="50" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Tài Khoản:</label>
+                </div>
+                <div class="col-md-8">
+                    <select [(ngModel)]="idAccount" (change)="changeAcount()">
+                        <option *ngFor="let item of arrAccount" [value]="item.id">{{item.name}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-8">
+                    <button (click)="submit()">submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Giá Sản Phẩm:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.price" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Link ebay listting:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.linkebay_listting" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Link ebay about:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.linkebay_about" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Link ebay feedback:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.linkebay_feedback" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Link ebay contact:</label>
+                </div>
+                <div class="col-md-8">
+                    <input [(ngModel)]="model.linkebay_contact" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Hình ảnh</label>
+                </div>
+                <div class="col-md-7">
+                    <input [(ngModel)]="stringhinhanh" type="text">
+                </div>
+                <div class="col-md-1">
+                    <button (click)="addArrImage()">Add</button>
+                </div>
+            </div>
+            <div class="row" *ngFor="let item of model.arrHinhanh; let i = index">
+                <div class="col-md-10">
+                    <input [(ngModel)]="item.name" type="text">
+                </div>
+                <div class="col-md-2">
+                    <button (click)="deleteArrImage(i)">xoa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="textwrapper">
+    <textarea [(ngModel)]="result" cols="2" rows="10" id="rules"></textarea>
+</div>
