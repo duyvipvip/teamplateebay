@@ -18,7 +18,7 @@ export class TemplateebayComponent implements OnInit {
     ngOnInit() {
         this.model = {
             title: '',
-            logo: 'https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.0-9/56174926_829954837367899_409360067490480128_n.jpg?_nc_cat=106&_nc_oc=AQl1PqDSSGLuB2JkMo9AVhhpenwq2zaGlM2M4iRvdhos3oDYa_rIgBJoj_HxK5aWokY&_nc_ht=scontent.fsgn2-3.fna&oh=7b588d61f48a52086fefd6d595bd78c7&oe=5D030A79',
+            logo: 'https://www.co.pierce.wa.us/images/CivicAlerts/1/_no%20scam.png',
             price: '',
             arrHinhanh: [],
             description: '',
